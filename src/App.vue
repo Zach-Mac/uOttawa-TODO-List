@@ -1,25 +1,27 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <h1>uOttawa TODO List</h1>
+    <nav>
+      <nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/python/">Python</a>
+      </nav>
+    </nav>
   </header>
 
   <main>
-    <TheWelcome />
+
   </main>
 </template>
 
+<script setup>
+</script>
+
 <style>
 @import './assets/base.css';
-
+/* 
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -77,5 +79,5 @@ a,
   .logo {
     margin: 0 2rem 0 0;
   }
-}
+} */
 </style>
