@@ -13,13 +13,7 @@
   <a href="home.html" class="home">Home</a>
 </template>
 
-<script>
-import Header from '@/components/Header.vue'
-export default {
-  components: {
-    Header
-  }
-}
+<script setup>
 </script>
 
 <style>
