@@ -3,23 +3,17 @@
         <input placeholder="Enter Class">
         <input type="time" placeholder="Enter Time">
         <select name="test">
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
+            <option v-for="day in days" :value="day">{{day}}</option>
         </select>
         <input type="submit" value="Add Class to Schedule">
     </form>
+    
    <table border = "1">
     <tr>
         <th></th>
         <th v-for="day in days">{{day}}</th>
     </tr>
     <tr></tr>
-    <!-- v-for from 0 to 24 -->
 
     <tr v-for="time in numTimes">
         <td>{{toTime(time +timeStart-1)}}</td>
