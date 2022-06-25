@@ -38,9 +38,10 @@ const days = [
     'Friday',
     'Saturday',
     'Sunday'
-]
-const timeStart = 8
-const numTimes = 12
+];
+
+const timeStart = 8;
+const numTimes = 12;
 
 function toTime(time) {
     time = time % 12 + ":00 " + (parseInt(time / 12) % 2 == 0 ? "AM" : "PM");
