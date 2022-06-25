@@ -1,6 +1,4 @@
 <template>
-
-  <div class="background">
     <div class="links">
       <h1>uOttawa TODO List</h1>
       <router-link to="/">Home</router-link> |
@@ -8,7 +6,6 @@
       <router-link to="/homework">Homework</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-  </div>
 
   <router-view />
 
@@ -22,7 +19,7 @@
 @import '@/assets/base.css';
 
 /* add background image in top left of uottawa logo */
-.background {
+.links {
   background-image: url('/UOttawaLogo.png');
   background-repeat: no-repeat;
   background-position: top left;
@@ -30,6 +27,13 @@
   padding: 2rem;
   margin: 0 auto;
   max-width: 1280px;
+}
+
+/* make background image dissapear if on a phone screen */
+@media (max-width: 800px) {
+  .links {
+    background-image: none;
+  }
 }
 
 /* center links class and newline after h1 */

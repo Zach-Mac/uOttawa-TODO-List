@@ -1,4 +1,5 @@
 <template>
+  <div class="easter-egg"></div>
   <h2 class="group">
     Website created for CSI3140 class by Zachary MacDonald 300120841, Zachary Stempowicz 300136018 and
     Liam MacLean 300128405
@@ -17,7 +18,7 @@
 <style scoped>
 
 /* add and easter egg where if the user is using a phone screen, an image of an easter egg appears */
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .group {
     display: none;
   }
