@@ -7,24 +7,14 @@
     It is a tool to stay organized with uOttawa homework and keeping up to date on lecture, lab, and tutorial
     recordings.
     <br>
-    For Assignment 1, this is only the HTML for the site with no css or js.
+    For Assignment 2, this is only the HTML and CSS with no working JS.
   </p>
-
-  <a href="home.html" class="home">Home</a>
 </template>
 
-<script>
-import Header from '@/components/Header.vue'
-export default {
-  components: {
-    Header
-  }
-}
+<script setup>
 </script>
 
-<style>
-@import '@/assets/base.css';
-
+<style scoped>
 /* make group class red comic sans*/
 .group {
   font-family: "Comic Sans MS", cursive, sans-serif;
