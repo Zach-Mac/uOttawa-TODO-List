@@ -10,7 +10,7 @@
                 <input class="addClass" type="submit" value="Add Class to Schedule">
             </form>
                 
-            <table border = "1">
+            <table border = "1" class="table">
                 <tr>
                     <th></th>
                     <th v-for="day in days">{{day}}</th>
@@ -130,6 +130,11 @@ if the display width is less than 1200px, the calendar will be in a row */
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+/* make all entries in table the same width */
+table {
+  table-layout: fixed ;
+  width: 100% ;
 }
 
 </style>
