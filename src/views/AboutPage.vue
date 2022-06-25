@@ -15,15 +15,40 @@
 </script>
 
 <style scoped>
+
+/* add and easter egg where if the user is using a phone screen, an image of an easter egg appears */
+@media (max-width: 600px) {
+  .group {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+  .easter-egg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('/easter-egg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+
 /* make group class red comic sans*/
 .group {
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: red;
+  display: flex;
+  justify-content: center;
 }
 
 /* make description class blue Times new Roman*/
 .description {
   font-family: "Times New Roman", Times, serif;
   color: blue;
+  display: flex;
+  justify-content: center;
 }
 </style>
