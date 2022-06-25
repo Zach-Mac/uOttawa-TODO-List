@@ -1,5 +1,4 @@
 <template>
-  <Header />
     <form>
         <input placeholder="Enter Class">
         <input type="time" placeholder="Enter Time">
@@ -17,15 +16,14 @@
 </template>
 
 <script>
-    import Header from '@/components/Header.vue'
-    export default {
-        components: {
-            Header
-        }
+import Header from '@/components/Header.vue'
+export default {
+    components: {
+        Header
     }
+}
 </script>
 
 <style>
-    @import '@/assets/base.css';
-    
+@import '@/assets/base.css';
 </style>
