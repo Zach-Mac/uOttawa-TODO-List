@@ -1,17 +1,20 @@
 <template>
-    <h1>uOttawa TODO List</h1>
+    <h2>Homework List</h2>
     <TodoForm />
+    <TodoList />
 </template>
 
 <script>
   import TodoForm from '@/components/TodoForm.vue'
+  import TodoList from '@/components/TodoList.vue'
   export default {
     components: {
-      TodoForm
+      TodoForm,
+      TodoList
     }
   }
 </script>
-
+  
 <style>
  /*@import './assets/base.css'; */
 /* 
