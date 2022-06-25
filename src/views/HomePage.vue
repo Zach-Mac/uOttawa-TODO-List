@@ -18,4 +18,9 @@
 </script>
 
 <style scoped>
+/* center the p text wtih flex and justify content */
+p {
+    display: flex;
+    justify-content: center;
+}
 </style>
