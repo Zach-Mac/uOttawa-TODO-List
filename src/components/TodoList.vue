@@ -1,0 +1,13 @@
+<template>
+    <h1>uOttawa TODO List</h1>
+    <a href="home.html">Home</a> |
+    <a href="classes.html">Classes</a> |
+    <a href="homework.html">Homework</a> |
+    <a href="about.html">About</a>
+</template>
+
+<script setup>
+</script>
+
+<style>
+</style>
