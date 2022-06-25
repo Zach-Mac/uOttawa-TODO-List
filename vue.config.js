@@ -1,16 +1,17 @@
 module.exports = {
     pages: {
-        home: {
-            entry: 'src/pages/home/main.js',
-            template: 'public/index.html',
-            filename: 'home.html',
-            title: 'Home Page'
-        },
+       
         about: {
             entry: 'src/pages/about/main.js',
             template: 'public/index.html',
             filename: 'about.html',
             title: 'About Page'
+        },
+        home: {
+            entry: 'src/pages/home/main.js',
+            template: 'public/index.html',
+            filename: 'home.html',
+            title: 'Home Page'
         },
         homework: {
             entry: 'src/pages/homework/main.js',

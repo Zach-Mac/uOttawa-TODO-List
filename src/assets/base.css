@@ -72,3 +72,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* make home link button look nice*/
+.home {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 25%;
+  background-color: hsla(160, 100%, 37%, 0.2);
+  color: hsla(160, 100%, 37%, 1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+}
+
+/* make logo image centered and scaled down to 25% its original size*/
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 25%;
+}

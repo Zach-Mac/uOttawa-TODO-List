@@ -1,20 +1,19 @@
 <template>
-    <h1>uOttawa TODO List</h1>
-    <nav>
-        <nav>
-            <a href="/html/">HTML</a> |
-            <a href="/css/">CSS</a> |
-            <a href="/js/">JavaScript</a> |
-            <a href="/python/">Python</a>
-        </nav>
-    </nav>
+
+  <Header />
 </template>
 
-<script setup>
-
+<script>
+import Header from '@/components/Header.vue'
+export default {
+  components: {
+    Header
+  }
+}
 </script>
 
 <style>
+
 /* @import './assets/base.css'; */
 /* 
 #app {
