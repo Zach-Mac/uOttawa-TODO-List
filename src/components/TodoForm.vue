@@ -1,18 +1,39 @@
 <template>
     <h2>Homework List</h2>
-    <form>
-        <input style="margin-right: 10px;" type="text" placeholder="Please enter your assignment" name="enter-todo">
-        <input style="margin-right: 10px;" type="text" placeholder="Please enter your class" name="enter-class">
-        <input type="text" placeholder="Please enter the due date" name="enter-duedate">
-        <button @click="{}" >Submit</button>
+    <form @submit="submit">
+        <input style="margin-right: 10px;" type="text" placeholder="Please enter your assignment" name="todo">
+        <input style="margin-right: 10px;" type="text" placeholder="Please enter your class" name="class">
+        <input type="text" placeholder="Please enter the due date" name="duedate">
+        <button type="submit" >Submit</button>
     </form>
 </template>
 
 <script setup>
-    import {ref} from 'vue'
+    const emit = defineEmits(['add-todo'])
 
-    function submit() {
-        
+    function validateForm(e) {
+        //ensure that the form is not empty
+        if (e.target.todo.value == "" || e.target.class.value == "" || e.target.duedate.value == "") {
+            alert("Please fill out all fields");
+            return false;
+        }
+        return true;
+    }
+    function submit(e) {
+        e.preventDefault();
+
+        if (!validateForm(e)) {
+            return;
+        }
+
+        let data = {
+            text: e.target.todo.value,
+            class: e.target.class.value,
+            dueDate: e.target.duedate.value
+        };
+
+        //emit the event to the parent component
+        emit('add-todo', data);
     }
 
     

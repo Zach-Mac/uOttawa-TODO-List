@@ -1,42 +1,47 @@
 <template>
     <div class="todos">
         <ul>
-            <li className="h3" v-for="todo in todos2"><div class="listText">{{todo.text}}<span class="classText">{{"   " + todo.class}}</span><span class="dueDateText">{{"   " + todo.dueDate}}</span></div></li>
+            <li className="h3" v-for="todo in state.todos">
+                <div class="listText">
+                    {{todo.text}}
+                    <span class="classText">{{"   " + todo.class}}
+                    </span>
+                    <span class="dueDateText">{{"   " + todo.dueDate}}</span>
+
+                    <button class="deleteButton" @click="deleteTodo(todo)">X</button>
+                </div>
+            </li>
         </ul>
         
     </div>
 </template>
 
 <script setup>
-    import {ref} from 'vue'
-
-    // state
-    // const todos = ref([{text: "", class: "", dueDate: ""}]);
-    const t2 = {text: "Finish Assignment 2", class: "CSI 3140", dueDate: "June 25th"};
-    const t3 = {text: "Finish Assignment 3", class: "CSI 3140", dueDate: "June 31st"};
-    const todos2 = ref([t2,t3]);
-    // actions
-    function addTodo(t) {
-        var newArray = [t, ...todos];
-        setTodos(newArray);
-    }
-
+    import {defineProps, watch, toRef, computed} from 'vue'
+    const props = defineProps(['state'])
 
     function deleteTodo(t) {
-        var newArray = todos.filter(n => n.id != t.id);
-        setTodos(newArray);
-    }
-
-    function editTodo(t) {
-        var userInput = prompt('Update your Todo');
-        t.text = userInput;
-        var newArray = [...todos];
-        setTodos(newArray);
+        var newArray = props.state.todos.filter(todo => todo.text != t.text);
+        props.state.todos = newArray;
     }
 
 </script>
 
 <style scoped>
+    /* style deleteButton */
+    .deleteButton {
+        background-color: #ff0000;
+        border-radius: 5px;
+        border: 1px solid #ff0000;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
 
     li {
     list-style-type: none;
