@@ -1,23 +1,17 @@
 <template>
 	<form @submit="addClass" class="form">
 		<input placeholder="Enter Class" class="enterClass" />
-		<!-- add label to selecttimeslot -->
 		<select class="selectTimeSlot">
 			<option value="">Select Timeslot</option>
 			<option v-for="timeSlot in timeSlots.length" :value="timeSlot">
 				{{ toTime(timeSlots[timeSlot - 1]) }}
 			</option>
 		</select>
-		<!-- <select class="selectTimeSlot">
-      <option v-for="timeSlot in timeSlots.length" :value="timeSlot">
-        {{ timeSlot }}
-      </option>
-    </select> -->
+
 		<select name="test" class="daySelector">
 			<option v-for="day in days" :value="day">{{ day }}</option>
 		</select>
 		<button class="addClassButton" type="submit">Add Class</button>
-		<!-- <button class="addClass" type="submit" value="Add Class to Schedule" /> -->
 	</form>
 
 	<table border="1" class="table">
